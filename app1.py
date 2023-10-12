@@ -2,6 +2,7 @@ import utility
 
 
 def show():
+    """ Returns the complete to-do ist as a string """
     prompt = ''
     todos = utility.read_from_file()
     if len(todos) != 0:
@@ -14,6 +15,7 @@ def show():
 
 
 def add(todo):
+    """ Add a new to-do to the list """
     todos = utility.read_from_file()
     todos.append(todo + '\n')
     utility.write_to_file(todos)
@@ -21,6 +23,7 @@ def add(todo):
 
 
 def edit(line_number, edit_line):
+    """ Edit an existing line in the to-do list """
     # get the to-do list
     todos = utility.read_from_file()
     todos[line_number - 1] = edit_line + '\n'
@@ -31,6 +34,7 @@ def edit(line_number, edit_line):
 
 
 def complete(line_number):
+    """ Complete a to-do list item """
     todos = utility.read_from_file()
     # check if the number the user entered is ok
     if check_number(line_number):
@@ -45,5 +49,6 @@ def complete(line_number):
 
 
 def check_number(line_number):
+    """ Check if the number entered by the user is a valid line number in the to-do list """
     todos = utility.read_from_file()
     return utility.is_valid_number(len(todos), line_number)
