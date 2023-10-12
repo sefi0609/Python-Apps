@@ -1,14 +1,13 @@
 FILE_PATH = 'todo_list.txt'
 
 
-def is_valid_number(number_of_lines):
+def is_valid_number(number_of_lines, line_number):
     """ check if the line number is in range """
     while True:
-        line_number = input('Please select a line number: ')
-        if line_number.isnumeric() and number_of_lines >= int(line_number) >= 1:
-            return int(line_number)
+        if number_of_lines >= line_number >= 1:
+            return True
         else:
-            print(f'Please enter a valid number from 1 to {number_of_lines}')
+            return False
 
 
 def write_to_file(todos, file_path=FILE_PATH):
