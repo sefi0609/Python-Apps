@@ -47,8 +47,11 @@ def todo():
                     window['textbox'].update(output)
                 except ValueError:
                     window['textbox'].update('Please enter a number: ')
+            case sg.WINDOW_CLOSED:
+                break
 
         window['textinput'].update('')
+    window.close()
 
 
 if __name__ == '__main__':
