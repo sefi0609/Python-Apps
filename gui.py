@@ -21,6 +21,10 @@ def todo():
     while True:
         event, values = window.read(timeout=10)
         window['timetext'].update(time.strftime('%H:%M:%S'))
+        # two ways to exit the application
+        if event in [sg.WINDOW_CLOSED, 'Exit']:
+            break
+        # handel the current user action
         match event:
             case 'Show':
                 output = app1.show()
@@ -55,10 +59,6 @@ def todo():
                 except ValueError:
                     window['textbox'].update('Please enter a number: ')
                 window['textinput'].update('')
-            case sg.WINDOW_CLOSED:
-                break
-            case 'Exit':
-                break
 
     window.close()
 
