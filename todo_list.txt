@@ -1,7 +1,6 @@
-Clean The House
-New To-Do Item
 Go To Work
 Fix The Computer
 Buy Groceries
 Throw Out The Garbage
-New Task
+Clean The House
+New To-Do Item

@@ -4,7 +4,9 @@ FILE_PATH = 'todo_list.txt'
 def add(todo):
     """ Add a new to-do to the list """
     todos = read_from_file()
-    todo = todo.title() + '\n'
+    # make sure this is not an existing line from the to-do list
+    if not todo.endswith('\n'):
+        todo = todo.title() + '\n'
 
     if todo not in todos:
         todos.append(todo)
@@ -17,11 +19,13 @@ def edit(old_line, new_line):
     """ Edit an existing line in the to-do list """
     # get the to-do list
     todos = read_from_file()
-    new_line = new_line.title() + '\n'
+    # make sure this is not an existing line from the to-do list
+    if not new_line.endswith('\n'):
+        new_line = new_line.title() + '\n'
 
     if new_line not in todos:
         index = todos.index(old_line)
-        todos[index] = new_line.title() + '\n'
+        todos[index] = new_line
         # write the new list to the file
         write_to_file(todos)
     else:
