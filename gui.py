@@ -5,15 +5,11 @@ import threading
 
 sg.theme('BlueMono')
 
-initial_prompt = """To edit or complete a todo list item,
-Please enter a line number and then press the matching button
-"""
-
 layout = [[sg.Text('', size=(7, 1), font=('Any', 25), key='timetext')],
           [sg.Text('Type in a to-do:')],
           [sg.InputText(size=45, tooltip='Enter todo: ', key='textinput'), sg.Button('Add')],
           [sg.Listbox(values=app1.read_from_file(), size=(35, 10), key='listbox', enable_events=True), sg.Button('Edit')],
-          [sg.Button('Complete'), sg.Button('Exit')]]
+          [sg.Button('Complete'), sg.Button('Reset'), sg.Button('Exit')]]
 
 
 def popup_thread(window: sg.Window, text):
@@ -61,6 +57,10 @@ def todo():
                     window['textinput'].update('')
                 else:
                     output = 'Please select an item to complete'
+
+            case 'Reset':
+                window['textinput'].update('')
+                window['listbox'].update(app1.read_from_file())
 
             # new popup thread
             case '-POPUP-':
