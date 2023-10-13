@@ -4,20 +4,28 @@ FILE_PATH = 'todo_list.txt'
 def add(todo):
     """ Add a new to-do to the list """
     todos = read_from_file()
-    todos.append(todo + '\n')
-    write_to_file(todos)
-    return f'The new item: "{todo}" was added to your todo-list'
+    todo = todo.title() + '\n'
+
+    if todo not in todos:
+        todos.append(todo)
+        write_to_file(todos)
+    else:
+        return f'This todo: "{todo.strip()}" is already in your list'
 
 
 def edit(old_line, new_line):
     """ Edit an existing line in the to-do list """
     # get the to-do list
     todos = read_from_file()
-    todos[line_number - 1] = edit_line + '\n'
+    new_line = new_line.title() + '\n'
 
-    # write the new list to the file
-    write_to_file(todos)
-    return f'The line number: {line_number}, has changed to "{edit_line}"'
+    if new_line not in todos:
+        index = todos.index(old_line)
+        todos[index] = new_line.title() + '\n'
+        # write the new list to the file
+        write_to_file(todos)
+    else:
+        return f'This todo: "{new_line.strip()}" is already in your list'
 
 
 def complete(todo):
@@ -27,7 +35,6 @@ def complete(todo):
     todos.remove(todo)
     # write the new list to the file
     write_to_file(todos)
-    return f'The line: "{todo.strip()}" has completed successfully'
 
 
 def is_valid_number(line_number):

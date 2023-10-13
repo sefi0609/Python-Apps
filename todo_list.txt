@@ -1,9 +1,7 @@
-i love limor
-clean the house
-fix the computer
-new to-do item
-go to work
-buy food
-learn to fly
-go to the grocery
-task99
+Clean The House
+New To-Do Item
+Go To Work
+Fix The Computer
+Buy Groceries
+Throw Out The Garbage
+New Task

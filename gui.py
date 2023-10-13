@@ -16,33 +16,50 @@ layout = [[sg.Text('', size=(10, 1), font=('Any', 25), key='timetext')],
           [sg.Button('Complete'), sg.Button('Exit')]]
 
 
+def popup_thread(window: sg.Window, text):
+    """ release a popup thread """
+    window.write_event_value('-POPUP-', text)
+
+
 def todo():
     """ Main entry point - deals with all the possible commends """
     window = sg.Window('My To-Do App', layout)
     while True:
         # clock configuration
-        event, values = window.read()
+        event, values = window.read(timeout=10)
         window['timetext'].update(time.strftime('%H:%M:%S'))
+        output = None
+
         # two ways to exit the application
         if event in [sg.WINDOW_CLOSED, 'Exit']:
             break
+
         # handel the current user action
         match event:
             case 'Add':
                 if values['textinput'] != '':
-                    # need to release a thread for output popup
                     output = app1.add(values['textinput'])
                     window['listbox'].update(app1.read_from_file())
                     window['textinput'].update('')
+
             case 'Edit':
                 text = sg.popup_get_text('Enter The edited line: ', title="Waiting You Response")
-                # need to release a thread for output popup
-                output = app1.edit(values['listbox'][0], text)
-                window['listbox'].update(app1.read_from_file())
+                # if the user press cancel in the popup - do nothing
+                if text is not None and text != '':
+                    output = app1.edit(values['listbox'][0], text)
+                    window['listbox'].update(app1.read_from_file())
+
             case 'Complete':
-                # need to release a thread for output popup
-                output = app1.complete(values['listbox'][0])
+                app1.complete(values['listbox'][0])
                 window['listbox'].update(app1.read_from_file())
+
+            # new popup thread
+            case '-POPUP-':
+                sg.popup_non_blocking(values['-POPUP-'], title='Popup Message')
+
+        # popup a relevant message
+        if output:
+            threading.Thread(target=popup_thread, args=(window, output), daemon=True).start()
 
     window.close()
 
