@@ -13,7 +13,7 @@ def add_todo():
 
 
 st.title('My Todo App')
-
+st.subheader(time.strftime('%B %d %Y'))
 todos = app1.read_from_file()
 
 for todo in todos:
