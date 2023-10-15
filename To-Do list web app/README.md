@@ -3,7 +3,7 @@
 you can take a picture of yourself and save it  
 you can upload photos
 
-![image](https://github.com/sefi0609/Python-Apps/assets/81361291/6fe5c84b-668f-4299-99ba-b033fb1530e4)
+![image](https://github.com/sefi0609/Python-Apps/assets/81361291/25be736c-76d1-406e-af57-672d28604ae6)
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/e1a8e480-ae67-4d03-8da2-18d2517fb275)
 
