@@ -1,6 +1,6 @@
 # To-Do list web 
 ### A to-do list web app with date, camera and gallery, with a requirements.txt file 
-you can take a picture of yourself and save it
+you can take a picture of yourself and save it  
 you can upload photos
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/6fe5c84b-668f-4299-99ba-b033fb1530e4)
