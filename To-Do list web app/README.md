@@ -12,4 +12,4 @@ you can upload photos.
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/0031f17a-838e-45ec-8f8b-70a4c221632c)
 
-![image](https://github.com/sefi0609/Python-Apps/assets/81361291/1bad3c8f-12ee-49a9-875b-60581c47e274)
+![image](https://github.com/sefi0609/Python-Apps/assets/81361291/50d70434-f8a2-4398-91b4-7b3a4f884ee0)
