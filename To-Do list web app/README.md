@@ -1,5 +1,6 @@
 # To-Do list web 
-### A to-do list web app with date, camera and gallery, with a requirements.txt file 
+### A to-do list web app with date, camera and gallery.
+I have added a requirements.txt file just in case you want to deploy the app.  
 you can take a picture of yourself and save it  
 you can upload photos
 
