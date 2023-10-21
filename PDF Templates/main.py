@@ -9,8 +9,8 @@ pdf.set_auto_page_break(auto=False, margin=0)
 
 # length of A4 page is 210
 def create_multiple_lines():
-    for i in range(20, 290, 10):
-        pdf.line(10, i, 210 - 10, i)
+    for y in range(20, 290, 10):
+        pdf.line(10, y, 210 - 10, y)
         
 
 for index, line in df.iterrows():
