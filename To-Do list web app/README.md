@@ -3,6 +3,8 @@
 I have added a requirements.txt file just in case you want to deploy the app.  
 you can take a picture of yourself and save it,  
 you can upload photos.
+I have added just for fun the Astronomy Picture of the Day,  
+From the NASA open APIs.
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/8879495a-f18e-42fa-a6f5-beac61438883)
 
@@ -13,3 +15,5 @@ you can upload photos.
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/0031f17a-838e-45ec-8f8b-70a4c221632c)
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/50d70434-f8a2-4398-91b4-7b3a4f884ee0)
+
+![image](https://github.com/sefi0609/Python-Apps/assets/81361291/6922e26a-7403-418f-9d44-8c943797cb0d)
