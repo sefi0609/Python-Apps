@@ -2,7 +2,7 @@
 ### A to-do list web app with date, camera and gallery
 I have added a requirements.txt file just in case you want to deploy the app.  
 you can take a picture of yourself and save it,  
-you can upload photos.
+you can upload photos.  
 I have added just for fun the Astronomy Picture of the Day,  
 From the NASA open APIs.
 
