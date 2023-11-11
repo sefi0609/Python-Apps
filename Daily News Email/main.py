@@ -13,7 +13,7 @@ url = 'https://newsapi.org/v2/everything?' \
       f'domains=wsj.com&' \
       f'from={date}&' \
       'sortBy=publishedAt&' \
-      'apiKey=f4ca502334534cd089c97386683ffec4&' \
+      'apiKey={ENTER YOUR API KEY}' \
       'language=en'
 
 # make request
