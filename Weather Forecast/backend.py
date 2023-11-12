@@ -4,7 +4,7 @@ from datetime import date, timedelta, datetime
 
 def get_data(place, days, option):
     # get the forecast from the API
-    url = f'https://api.openweathermap.org/data/2.5/forecast' \
+    url = 'https://api.openweathermap.org/data/2.5/forecast' \
     f'?q={place}' \
     '&appid={ENTER YOUR API KEY}'
     
