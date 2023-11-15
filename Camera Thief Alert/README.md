@@ -1,6 +1,6 @@
 # Camera Thief Alert
 
-This is a script that generat video from your PC camera,   
+This is a script that generate video from your PC camera,   
 Add a green rectangle around the object (person),  
 And sent the best photo of the object to your email.  
 I used threads so the video doesn't freeze.
