@@ -1,8 +1,9 @@
 # Camera Thief Alert
 
-This is a script that generat photos from your PC camera,   
+This is a script that generat video from your PC camera,   
 Add a green rectangle around the object (person),  
-And sent the best photo to your email
+And sent the best photo of the object to your email.  
+I used threads so the video doesn't freeze.
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/3d691f47-bc99-422d-8d9c-3157bbc41023)
 
