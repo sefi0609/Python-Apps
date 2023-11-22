@@ -8,7 +8,7 @@ def store(extracted):
     row = extracted.split(',')
     band, city, date = [col.strip() for col in row]
     cur = con.cursor()
-    cur.execute(f'INSERT INTO events VALUES(?,?,?)', (band, city, date))
+    cur.execute('INSERT INTO events VALUES(?,?,?)', (band, city, date))
     con.commit()
 
 
@@ -17,5 +17,5 @@ def read(extracted):
     row = extracted.split(',')
     band, city, date = [col.strip() for col in row]
     cur = con.cursor()
-    cur.execute(f'SELECT * FROM events WHERE band=? AND city=? AND date=?', (band, city, date))
+    cur.execute('SELECT * FROM events WHERE band=? AND city=? AND date=?', (band, city, date))
     return cur.fetchall()
