@@ -2,6 +2,7 @@ import requests
 import selectorlib
 from data_base import store, read
 from send_email import send_email
+import time
 
 URL = 'http://programmer100.pythonanywhere.com/tours/'
 # fool the server that this is a browser
@@ -38,6 +39,8 @@ def get_next_tour():
           if not tour:
               store(extracted)
               send_email(extracted)
+
+      time.sleep(10)
 
 
 if __name__ == "__main__":
