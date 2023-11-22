@@ -24,19 +24,20 @@ def extract(source):
 
 
 def get_next_tour():
-    # get the web page
-    scraped = scrape(URL)
-    # extract the tour
-    extracted = extract(scraped)
-
-    if extracted != 'No upcoming tours':
-        # try to get the tour from the date base
-        tour = read(extracted)
-
-        # if not in db, insert in to the date base
-        if not tour:
-            store(extracted)
-            send_email(extracted)
+  while True:
+      # get the web page
+      scraped = scrape(URL)
+      # extract the tour
+      extracted = extract(scraped)
+  
+      if extracted != 'No upcoming tours':
+          # try to get the tour from the date base
+          tour = read(extracted)
+  
+          # if not in db, insert in to the date base
+          if not tour:
+              store(extracted)
+              send_email(extracted)
 
 
 if __name__ == "__main__":
