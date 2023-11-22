@@ -39,7 +39,7 @@ def get_next_tour():
           if not tour:
               store(extracted)
               send_email(extracted)
-
+      # delay
       time.sleep(10)
 
 
