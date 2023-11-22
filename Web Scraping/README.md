@@ -1,7 +1,8 @@
 ## Web Scraping 
 
 This is a script that get new upcoming tours from a website,  
-and send you an email of those thours info.  
+and send you an email of those thours info.
+You will get the new ones only, one email for each tour.
 You can use a server that runs 24/7 to get all the upcoming tours.  
 From exemple you can use pythonanywhere.
 
