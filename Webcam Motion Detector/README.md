@@ -1,7 +1,7 @@
-# Camera Thief Alert
+# Webcam Motion Detector
 
 This is a script that generate video from your PC camera or USB camera,  
-Add a green rectangle around the object (person),  
+Adds a green rectangle around the object (person),  
 And sent the best photo of the object to your email.  
 I used threads so the video doesn't freeze.
 
