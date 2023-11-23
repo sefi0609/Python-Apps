@@ -1,4 +1,4 @@
-## Web Scraping 
+## Tour Scraper
 
 This is a script that get new upcoming tours from a website,  
 and send you an email of those thours info.  
