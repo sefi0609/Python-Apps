@@ -20,9 +20,12 @@ class ChatBotWindow(QMainWindow):
 
         self.user_input = QLineEdit(self)
         self.user_input.setPlaceholderText('Enter A Question')
+        
+        # you can press enter to submit the question
         self.user_input.returnPressed.connect(self.send_query)
         self.user_input.setGeometry(20, 340, 400, 25)
 
+        # or use the send button
         button = QPushButton('Send', self)
         button.clicked.connect(self.send_query)
         button.setGeometry(430, 340, 60, 25)
