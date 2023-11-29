@@ -8,6 +8,7 @@ class ChatBot:
 
     def get_response(self, user_input):
         """ A function interact with chat GPT """
+        
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
