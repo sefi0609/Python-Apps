@@ -53,8 +53,9 @@ def get_all_temp(station):
     # adjust the data
     df['TG'] = df['   TG'] / 10
     df = df.loc[df['   TG'] != -9999]
+    df['DATE'] = df['    DATE']
 
-    return df[['    DATE', 'TG']].to_dict(orient='records')
+    return df[['DATE', 'TG']].to_dict(orient='records')
 
 
 @app.route('/api/v1/yearly/<station>/<year>')
@@ -69,8 +70,9 @@ def get_all_year_temp(station, year):
     df['TG'] = df['   TG'] / 10
     df = df.loc[df['   TG'] != -9999]
     df = df.loc[df['    DATE'].dt.year == int(year)]
+    df['DATE'] = df['    DATE']
 
-    return df[['    DATE', 'TG']].to_dict(orient='records')
+    return df[['DATE', 'TG']].to_dict(orient='records')
 
 
 def get_df(station):
