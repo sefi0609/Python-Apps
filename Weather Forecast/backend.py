@@ -33,16 +33,16 @@ def get_data(place, days, option):
             case _:
                 raise Exception('Need to select one of those options: [Temperature, Sky]')
 
-    # reorganize the data to return
-    for index, dt in enumerate(date_time):
-        current_day = dt
-
-        # return only the forecast for the days argument
-        if current_day.date() > last_day:
-            date_time = date_time[:index]
-            # change date formate
-            date_time = [dt.strftime('%a ,%b %d %H:%M') for dt in date_time]
-            weather = weather[:index]
-            break
+        # reorganize the data to return
+        for index, dt in enumerate(date_time):
+            current_day = dt
+    
+            # return only the forecast for the days argument
+            if current_day.date() > last_day:
+                date_time = date_time[:index]
+                # change date formate
+                date_time = [dt.strftime('%a ,%b %d %H:%M') for dt in date_time]
+                weather = weather[:index]
+                break
 
     return weather, date_time
