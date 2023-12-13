@@ -28,7 +28,7 @@ def get_temp(station, date):
     """ Get the specific temperature for each date for any station """
     # get data frame
     df = get_df(station)
-    if not df:
+    if df.empty:
         return error_dict
 
     # adjust the date parameter to a string
@@ -47,7 +47,7 @@ def get_all_temp(station):
     """ Get all the temperatures for the given station """
     # get data frame
     df = get_df(station)
-    if not df:
+    if df.empty:
         return error_dict
 
     # adjust the data
@@ -62,7 +62,7 @@ def get_all_year_temp(station, year):
     """ Get all the temperatures for the given station in a given year"""
     # get data frame
     df = get_df(station)
-    if not df:
+    if df.empty:
         return error_dict
 
     # adjust the data
@@ -84,7 +84,7 @@ def get_df(station):
         filename = f'data/TG_STAID{station}.txt'
         return pd.read_csv(filename, skiprows=20, parse_dates=['    DATE'])
     except FileNotFoundError:
-        return None
+        return
 
 
 if __name__ == '__main__':
