@@ -24,18 +24,17 @@ def delete_photo(photo):
 
 
 col1, empty_col, col2 = st.columns([1.5, 0.5, 1.5])
-mid = int(len(photos)/2)
 
 if photos:
     # show all the photos in the library
     with col1:
-        for photo in photos[:mid]:
+        for photo in photos[::2]:
             img = Image.open(f'Photos/{photo}')
             st.image(img)
             st.button('Delete', on_click=delete_photo, args=(photo,), key=photo)
 
     with col2:
-        for photo in photos[mid:]:
+        for photo in photos[1::2]:
             img = Image.open(f'Photos/{photo}')
             st.image(img)
             st.button('Delete', on_click=delete_photo, args=(photo,), key=photo)
