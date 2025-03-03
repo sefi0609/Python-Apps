@@ -1,7 +1,8 @@
-This is a script to get the daily news from the Wall Street Journal,  
-and send it to myself via email.  
+## Automate Daily News
+
+This is a script to get the daily news from the Wall Street Journal, and send it to myself via email.  
 I have used an API to get the articles (newsapi.org).   
-Also i have used pythonanywhere to set a daily task to send myself those articles.
+Also, I have used Pythonanywhere to set a daily task to send myself those articles.
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/4c26af91-5bf6-433c-aba3-39d7e5e8f907)
 
