@@ -1,9 +1,20 @@
-# Webcam Motion Detector
+# 🎥 Webcam Motion Detector
 
-This is a script that generate video from your PC camera or USB camera,  
-Adds a green rectangle around the object (person),  
-And sent the best photo of the object to your email.  
-I used threads so the video doesn't freeze.
+This **Python script** captures video from your **PC or USB camera**, detects motion, highlights the detected object with a **green rectangle**, and sends the **best-captured image** to your email.
+
+## Features
+- **Real-time object detection** using a webcam
+- **Highlights detected objects** with a green bounding box
+- **Captures and selects the best frame** for email alerts
+- **Multi-threading** ensures the video feed remains smooth
+
+## Technologies Used
+✅ **Python** – Core programming language  
+✅ **OpenCV** – For real-time video processing  
+✅ **SMTP (Email)** – For sending captured images  
+✅ **Threading** – Prevents video freezing  
+
+## Screenshots
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/3d691f47-bc99-422d-8d9c-3157bbc41023)
 
