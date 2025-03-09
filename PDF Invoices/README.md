@@ -15,5 +15,5 @@ It reads data from Excel, formats it into invoice templates, and outputs each in
 ✅ **FPDF** – To generate PDF files  
 
 ## Example
-- **Input Excel File**: A sample Excel file with columns like Item Name, Quantity, Price, etc.
-- **Generated PDF Invoice**: The output will be a PDF formatted with the invoice details from the Excel file.
+- **Input Excel File**: A sample Excel file with columns like Item Name, Quantity, Price, etc. (see [Invoices](Invoices) folder)
+- **Generated PDF Invoice**: The output will be a PDF formatted with the invoice details from the Excel file. (see [PDFs](PDFs) folder)
