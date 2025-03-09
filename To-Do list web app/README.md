@@ -1,10 +1,21 @@
-# To-Do list web 
-### A to-do list web app with date, camera and gallery
-I have added a requirements.txt file just in case you want to deploy the app.  
-you can take a picture of yourself and save it,  
-you can upload photos.  
-I have added just for fun the Astronomy Picture of the Day,  
-From the NASA open APIs.
+# To-Do List Web App 
+
+A feature-rich to-do list web app with built-in date tracking, camera support, and a media gallery.
+As a fun addition, the app also displays NASA’s Astronomy Picture of the Day using the NASA Open APIs.
+
+## Features
+- Create and manage tasks with a due date
+- Take a picture and save it within the app
+- Upload and store photos in a personal gallery
+- NASA Astronomy Picture of the Day for daily inspiration
+- Requirements.txt included for easy deployment
+
+## Technologies Used
+✅ Python – Core programming language  
+✅ Streamlit - Web framework  
+✅ NASA API – Fetches daily astronomy images  
+
+## Screenshots
 
 ![image](https://github.com/sefi0609/Python-Apps/assets/81361291/ecc99e66-0211-4603-995b-06ed69c7f88f)
 
