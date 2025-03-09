@@ -17,5 +17,5 @@ You can view the generated output in the output.pdf file.
 ✅ **CSV** – For input data file format  
 
 ## Screenshots
-- Generated PDF Example
+- Generated PDF Example  
   ***Please check the [output.pdf](output.pdf) file for a preview of the generated content***
