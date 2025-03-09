@@ -13,7 +13,7 @@ A **GUI-based ChatGPT client** using the **OpenAI API**. This application provid
 ✅ **OpenAI API** – For AI-powered chat responses  
 ✅ **Threading** – Prevents UI freezing  
 
-## ⚙️ How It Works
+## How It Works
 1. The user inputs text into the chat GUI.
 2. The OpenAI API processes the request and returns a response.
 3. The chatbot displays the response in the GUI.
